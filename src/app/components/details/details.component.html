@@ -1,6 +1,6 @@
 <div id="container">
-  <div>
-    <p>{{name}}</p>
-        <!-- <img src="pokemonImage" alt="Pokemon Image"> -->
+  <div (click)="details()">
+    <p class="namePokemon">{{name}}</p>
+        <img [src]="pokemonImage" alt="Pokemon Image">
   </div>
 </div>

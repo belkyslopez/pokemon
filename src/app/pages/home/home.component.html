@@ -1,8 +1,7 @@
-<div id="container">
-  <app-details *ngFor="let pokemon of listPokemon"
-  [pokemon] = "pokemon">
+<main id="container">
+  <div class="detailsComponent">
+    <app-details  *ngFor="let pokemon of listPokemon" [pokemon]="pokemon">
 
-  </app-details>
-
-</div>
-
+    </app-details>
+  </div>
+</main>

@@ -20,8 +20,5 @@ export class HomeComponent implements OnInit {
   async getPokemonData(){
     this.allPokemons = await this.pokemonService.getAllPokemon();
     this.listPokemon = this.allPokemons.results;
-    console.log("listPokemon", this.listPokemon);
-
   }
-
 }

@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class PokemonService {
 
+  pokemonDetails:any
+
   constructor( private http: HttpClient) { }
 
   getAllPokemon(){
@@ -16,8 +18,12 @@ export class PokemonService {
   }
 
 
-  getPokemon(id: number): Promise<any> {
+  getPokemonId(id: number): Promise<any> {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`).toPromise();
+  }
+
+  getImgPokemon(name: string){
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`).toPromise();
   }
 
 
