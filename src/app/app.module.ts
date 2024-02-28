@@ -7,13 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
+import { MayusculaPipe } from './mayuscula.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DetailsComponent,
-    PokemonComponent
+    PokemonComponent,
+    MayusculaPipe
   ],
   imports: [
     BrowserModule,

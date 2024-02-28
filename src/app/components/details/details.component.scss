@@ -1,11 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+$color-primario: #ffcc00; // Amarillo brillante como color principal de Pokémon
+$color-secundario: #377d46; // Verde oscuro para complementar
+$font-familia: 'Arial', sans-serif; // Familia de fuentes genérica
+
 #container{
-  height: 250px;
+  height: 230px;
   background-color: rgb(80, 235, 255);
   border-radius: 5px;
   margin: 5px;
-  padding: 5px;
   div{
     cursor: pointer;
   }
 
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .div-button{
+    display: flex;
+    justify-content: end;
+
+  }
+  .text{
+    text-align: center;
+  }
 }
+
+  // _botones.scss: Estilos para botones utilizados en la aplicación
+  .boton-pokemon {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#ffcc00, 10%);
+    }
+  }
+

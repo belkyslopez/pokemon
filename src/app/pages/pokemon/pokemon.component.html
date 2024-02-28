@@ -1,15 +1,26 @@
-
-
-  <img [src]="pokemonImage" alt="Pokemon Image">
+<div class="container">
   <div class="properties">
-    <p >{{pokemonDetails?.height}}</p>
-    <p >{{pokemonDetails?.weight}}</p>
-    <!-- <p >{{pokemonDetails?.name}}</p>
-    <p >{{pokemonDetails?.type}}</p> -->
+    <img [src]="pokemonImage" alt="Pokemon Image" class="imgPokemon">
+    <div class="text">
+      <p>Altura: {{pokemonDetails?.height}} mts.</p>
+      <p>Peso: {{pokemonDetails?.weight}} lb.</p>
+      <p>Nombre: {{pokemonDetails?.name}}</p>
+      <p *ngFor=" let tipo of pokemonDetails.types">
+        Tipo: {{tipo.type.name}}</p>
+    </div>
+    <div>
+      <h1 style="text-align: center;">Evoluciones Pokemon</h1>
+      <!-- <input type="text" {[(ngModel)]="pokemonName"} placeholder="Nombre del Pokémon"> -->
+      <!-- <button>Buscar</button>
+      <div *ngIf="error" style="color: red;">{{ error }}</div>
+      <ul *ngIf="evolutions.length > 0">
+        <li *ngFor="let evolution of evolutions">{{ evolution }}</li>
+      </ul> -->
+    </div>
+    <div class="btn">
+      <button class="boton-pokemon" (click)="atras()">
+        volver
+      </button>
+    </div>
   </div>
-
-  <button (click)="atras()">
-    volver
-  </button>
-
-
+</div>

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { Router } from '@angular/router';
+// import { mayuscula } from '../../mayuscula.pipe';
 
 
 @Component({
@@ -30,14 +31,10 @@ export class DetailsComponent implements OnInit {
   }
 
   async getImgPokemon(){
-    // console.log("getImgPokemon ==>");
      this.pokemonDetails = await this.pokemonService.getImgPokemon(this.pokemon.name);
-    //  console.log("pokemonDetails", this.pokemonDetails);
+    //  console.log("🚀  this.pokemonDetails:", this.pokemonDetails);
      this.pokemonImage = this.pokemonDetails.sprites.front_default;
-    //  console.log("pokemon input", this.pokemon);
      this.id = this.pokemon.url.substring(34,this.pokemon.url.length-1);
-    //  console.log("id", this.id);
-    //  console.log("pokemonImage", this.pokemonImage);
   }
 
   details(){

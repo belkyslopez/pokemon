@@ -1,6 +1,16 @@
 <div id="container">
   <div (click)="details()">
-    <p class="namePokemon">{{name}}</p>
-        <img [src]="pokemonImage" alt="Pokemon Image">
+    <div class="text">
+      <p class="namePokemon">{{name}} </p>
+      <p class="numberPokemon">N° 00{{id}} </p>
+    </div>
+    <div>
+      <img [src]="pokemonImage" alt="Pokemon Image">
+    </div>
+    <div class="div-button">
+      <button class="boton-pokemon" (click)="details()">
+        >
+      </button>
+    </div>
   </div>
 </div>

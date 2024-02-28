@@ -1,3 +1,45 @@
-.properties{
+.container {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  border-radius: 5px;
+
+  .properties {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+
+  .imgPokemon {
+    height: 50vh;
+    width: 50vh;
+    image-rendering: pixelated;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: end;
+  }
+
+  // _botones.scss: Estilos para botones utilizados en la aplicación
+  .boton-pokemon {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#ffcc00, 10%);
+    }
+  }
+
+  .text {
+    text-align: center;
+  }
+
 }
