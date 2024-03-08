@@ -22,13 +22,21 @@ export class PokemonService {
   }
 
   getImgPokemon(name: string){
-
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`).toPromise();
   }
 
-  getEvolucion(id: number){
-    return this.http.get(`https://pokeapi.co/api/v2/evolution-chain/${id}`);
-
+  getEvolucion(name: string): Promise<any>{
+   return this.http.get(`https://pokeapi.co/api/v2/pokemon-species/${name}`).toPromise();
   }
+
+  getExecuteUrl(url : string): Promise<any>{
+    const test1 = this.http.get(url).toPromise();
+    return test1
+  }
+
+  getPokemonEspecies = (name: string) => {
+    return fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}`,
+     {method: 'GET'}).then(data => data.json());
+}
 
 }

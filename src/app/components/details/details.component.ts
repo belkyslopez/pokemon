@@ -40,8 +40,6 @@ export class DetailsComponent implements OnInit {
   details(){
     this.pokemonService.pokemonDetails = this.pokemonDetails;
     this.router.navigate(['/pokemon']);
-
-
   }
 
 
